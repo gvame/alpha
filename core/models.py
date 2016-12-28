@@ -28,9 +28,9 @@ class Person(models.Model):
     address_country = models.TextField(
         verbose_name='País', blank=True, default='')
     phone_number = models.TextField(
-        verbose_name='Teléfono', blank=True, default='')
+        verbose_name='Teléfono', blank=True, null=True, default='')
     mobile_number = models.TextField(
-        verbose_name='Teléfono móvil', blank=True, default='')
+        verbose_name='Teléfono móvil', blank=True, null=True, default='')
     email = models.EmailField(
         verbose_name='Correo electrónico', blank=True, default='')
     comment = models.TextField(
@@ -91,6 +91,8 @@ class Membership(models.Model):
         verbose_name='Cuota de membresia',
         decimal_places=2,
         max_digits=6,
+        null=True,
+        blank=True,
     )
 
     card_status = models.TextField(verbose_name='Estado del carnet', blank=True, default='')

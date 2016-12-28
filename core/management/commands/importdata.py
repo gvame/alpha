@@ -42,8 +42,8 @@ class Command(BaseCommand):
                 'surname': data['Apelidos'],
                 # 'role': data['Rol'],
                 # 'group': data['Grupo'],
-                'phone_number': data['Telefono fixo'],
-                'mobile_number': data['Telefono movil'],
+                'phone_number': data['Telefono fixo'] or '',
+                'mobile_number': data['Telefono movil'] or 0,
                 'email': data['Email'],
             }
             membership_data = {
@@ -52,7 +52,7 @@ class Command(BaseCommand):
                 'ss_card_status': data['Tarjeta sanitaria'] or '',
                 'photo_status': data['Foto'] or '',
                 'dpa_status': data['LOPD'] or '',
-                'membership_fee': data['Cuota socio'] or '',
+                'membership_fee': data['Cuota socio'] or 0,
                 'payment_status': data['Pago'] or '',
             }
 
