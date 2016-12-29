@@ -43,7 +43,7 @@ class Command(BaseCommand):
                 # 'role': data['Rol'],
                 # 'group': data['Grupo'],
                 'phone_number': data['Telefono fixo'] or '',
-                'mobile_number': data['Telefono movil'] or 0,
+                'mobile_number': data['Telefono movil'] or 'None',
                 'email': data['Email'],
             }
             membership_data = {
